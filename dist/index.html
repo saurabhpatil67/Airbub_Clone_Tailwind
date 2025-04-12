@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Airbnb Clone : Using Tailwind CSS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!-- Part-1  -->
+      <div
+        class="grid grid-cols-3 px-8 border-b-2 w-screen h-20 items-center fixed top-0 bg-white"
+      >
+        <img src="./photo/logo1.png" alt="" class="w-36 h-20" />
+        <div
+          class="flex justify-evenly items-center border rounded-full shadow-md h-12 w-96"
+        >
+          <button class="border-r-2 text-base font-semibold px-3">
+            Anywhere
+          </button>
+          <button class="border-r-2 text-base font-semibold px-3">
+            Any week
+          </button>
+          <button class="text-base font-medium text-gray-500">
+            Add guests
+          </button>
+          <i
+            class="fa-solid fa-magnifying-glass bg-red-500 border rounded-full p-2"
+          ></i>
+        </div>
+        <div class="flex justify-center items-center">
+          <button
+            class="text-base font-semibold px-7 hover:bg-slate-100 hover:border-none hover:rounded-full hover:py-2 hover:px-7"
+          >
+            Airbnb your home
+          </button>
+          <i class="ri-global-line text-xl px-7"></i>
+          <div class="flex items-center border rounded-full py-1">
+            <i class="ri-menu-line text-xl px-2 pl-3"></i>
+            <i class="ri-account-circle-fill text-4xl px-1"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Part-2  -->
+      <div
+        class="flex items-center h-24 space-x-5 mt-4 fixed top-[64px] bg-white w-screen"
+      >
+        <div class="flex items-center">
+          <div
+            class="flex flex-col items-center pl-11 gap-3 text-zinc-500 hover:text-zinc-950 border-black"
+          >
+            <img class="h-8 w-8" src="./photo/img1.jpg" alt="" />
+            <p class="text-sm font-medium">Amazing pools</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center pl-8 m gap-3 text-zinc-500 hover:text-zinc-950"
+          >
+            <img class="h-8 w-8" src="./photo/img2.jpg" alt="" />
+            <p class="text-sm font-medium">Rooms</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center pl-8 m gap-3 text-zinc-500 hover:text-zinc-950"
+          >
+            <img class="h-8 w-8" src="./photo/img3.jpg" alt="" />
+            <p class="text-sm font-medium">Amazing views</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center pl-8 m gap-3 text-zinc-500 hover:text-zinc-950"
+          >
+            <img class="h-8 w-8" src="./photo/img4.jpg" alt="" />
+            <p class="text-sm font-medium">Islands</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center pl-8 m gap-3 text-zinc-500 hover:text-zinc-950"
+          >
+            <img class="h-8 w-8" src="./photo/img5.jpg" alt="" />
+            <p class="text-sm font-medium">Historical homes</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center pl-8 m gap-3 text-zinc-500 hover:text-zinc-950"
+          >
+            <img class="h-8 w-8" src="./photo/img6.jpg" alt="" />
+            <p class="text-sm font-medium">Farms</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center pl-8 m gap-3 text-zinc-500 hover:text-zinc-950"
+          >
+            <img class="h-8 w-8" src="./photo/img7.jpg" alt="" />
+            <p class="text-sm font-medium">Beachfront</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center pl-8 m gap-3 text-zinc-500 hover:text-zinc-950"
+          >
+            <img class="h-8 w-8" src="./photo/img8.jpg" alt="" />
+            <p class="text-sm font-medium">Cabins</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center pl-8 m gap-3 text-zinc-500 hover:text-zinc-950 mr-4"
+          >
+            <img class="h-8 w-8" src="./photo/img9.jpg" alt="" />
+            <p class="text-sm font-medium">OMG!</p>
+          </div>
+        </div>
+
+        <i
+          class="fa-solid fa-angle-right text-lg border border-gray-400 rounded-full p-[0.7rem] hover:border-gray-600"
+        ></i>
+
+        <div
+          class="flex items-center justify-center border rounded-xl p-3 shadow-md ml-2"
+        >
+          <i class="ri-equalizer-line pr-2"></i>
+          <p class="text-sm">Filters</p>
+        </div>
+
+        <div
+          class="flex items-center gap-4 border rounded-lg px-2 py-2 shadow-sm"
+        >
+          <p class="text-sm">Display total before taxes</p>
+          <i class="fa-solid fa-toggle-on text-3xl"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hotel  -->
+    <main class="mt-[13rem] mx-8">
+      <div class="grid grid-cols-4">
+        <div class="flex flex-col w-72 h-96">
+          <img
+            src="./photo/photo2.webp"
+            alt=""
+            class="rounded-md w-72 h-64 shadow-md"
+          />
+          <div class="flex justify-between mt-3">
+            <p class="text-base font-semibold">Kanathur Reddikuppam, India</p>
+            <div class="flex">
+              <i class="ri-star-s-fill"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="text-base text-gray-500">135 kilometres away</p>
+          <p class="text-base text-gray-500">11/16 Dec</p>
+          <p class="text-base text-gray-900 font-semibold">₹2,582 night</p>
+        </div>
+
+        <div class="flex flex-col w-72 h-96">
+          <img
+            src="./photo/photo1.webp"
+            alt=""
+            class="rounded-md w-72 h-64 shadow-md"
+          />
+          <div class="flex justify-between mt-3">
+            <p class="text-base font-semibold">Kanathur Reddikuppam, India</p>
+            <div class="flex">
+              <i class="ri-star-s-fill"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="text-base text-gray-500">135 kilometres away</p>
+          <p class="text-base text-gray-500">11/16 Dec</p>
+          <p class="text-base text-gray-900 font-semibold">₹2,582 night</p>
+        </div>
+
+        <div class="flex flex-col w-72 h-96">
+          <img
+            src="./photo/photo2.webp"
+            alt=""
+            class="rounded-md w-72 h-64 shadow-md"
+          />
+          <div class="flex justify-between mt-3">
+            <p class="text-base font-semibold">Kanathur Reddikuppam, India</p>
+            <div class="flex">
+              <i class="ri-star-s-fill"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="text-base text-gray-500">135 kilometres away</p>
+          <p class="text-base text-gray-500">11/16 Dec</p>
+          <p class="text-base text-gray-900 font-semibold">₹2,582 night</p>
+        </div>
+
+        <div class="flex flex-col w-72 h-96">
+          <img
+            src="./photo/photo3.webp"
+            alt=""
+            class="rounded-md w-72 h-64 shadow-md"
+          />
+          <div class="flex justify-between mt-3">
+            <p class="text-base font-semibold">Kanathur Reddikuppam, India</p>
+            <div class="flex">
+              <i class="ri-star-s-fill"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="text-base text-gray-500">135 kilometres away</p>
+          <p class="text-base text-gray-500">11/16 Dec</p>
+          <p class="text-base text-gray-900 font-semibold">₹2,582 night</p>
+        </div>
+
+        <div class="flex flex-col w-72 h-96">
+          <img
+            src="./photo/photo4.webp"
+            alt=""
+            class="rounded-md w-72 h-64 shadow-md"
+          />
+          <div class="flex justify-between mt-3">
+            <p class="text-base font-semibold">Kanathur Reddikuppam, India</p>
+            <div class="flex">
+              <i class="ri-star-s-fill"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="text-base text-gray-500">135 kilometres away</p>
+          <p class="text-base text-gray-500">11/16 Dec</p>
+          <p class="text-base text-gray-900 font-semibold">₹2,582 night</p>
+        </div>
+
+        <div class="flex flex-col w-72 h-96">
+          <img
+            src="./photo/photo6.webp"
+            alt=""
+            class="rounded-md w-72 h-64 shadow-md"
+          />
+          <div class="flex justify-between mt-3">
+            <p class="text-base font-semibold">Kanathur Reddikuppam, India</p>
+            <div class="flex">
+              <i class="ri-star-s-fill"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="text-base text-gray-500">135 kilometres away</p>
+          <p class="text-base text-gray-500">11/16 Dec</p>
+          <p class="text-base text-gray-900 font-semibold">₹2,582 night</p>
+        </div>
+
+        <div class="flex flex-col w-72 h-96">
+          <img
+            src="./photo/photo7.webp"
+            alt=""
+            class="rounded-md w-72 h-64 shadow-md"
+          />
+          <div class="flex justify-between mt-3">
+            <p class="text-base font-semibold">Kanathur Reddikuppam, India</p>
+            <div class="flex">
+              <i class="ri-star-s-fill"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="text-base text-gray-500">135 kilometres away</p>
+          <p class="text-base text-gray-500">11/16 Dec</p>
+          <p class="text-base text-gray-900 font-semibold">₹2,582 night</p>
+        </div>
+
+        <div class="flex flex-col w-72 h-96">
+          <img
+            src="./photo/photo8.webp"
+            alt=""
+            class="rounded-md w-72 h-64 shadow-md"
+          />
+          <div class="flex justify-between mt-3">
+            <p class="text-base font-semibold">Kanathur Reddikuppam, India</p>
+            <div class="flex">
+              <i class="ri-star-s-fill"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="text-base text-gray-500">135 kilometres away</p>
+          <p class="text-base text-gray-500">11/16 Dec</p>
+          <p class="text-base text-gray-900 font-semibold">₹2,582 night</p>
+        </div>
+
+        <div class="flex flex-col w-72 h-96">
+          <img
+            src="./photo/photo9.webp"
+            alt=""
+            class="rounded-md w-72 h-64 shadow-md"
+          />
+          <div class="flex justify-between mt-3">
+            <p class="text-base font-semibold">Kanathur Reddikuppam, India</p>
+            <div class="flex">
+              <i class="ri-star-s-fill"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="text-base text-gray-500">135 kilometres away</p>
+          <p class="text-base text-gray-500">11/16 Dec</p>
+          <p class="text-base text-gray-900 font-semibold">₹2,582 night</p>
+        </div>
+
+        <div class="flex flex-col w-72 h-96">
+          <img
+            src="./photo/photo10.webp"
+            alt=""
+            class="rounded-md w-72 h-64 shadow-md"
+          />
+          <div class="flex justify-between mt-3">
+            <p class="text-base font-semibold">Kanathur Reddikuppam, India</p>
+            <div class="flex">
+              <i class="ri-star-s-fill"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="text-base text-gray-500">135 kilometres away</p>
+          <p class="text-base text-gray-500">11/16 Dec</p>
+          <p class="text-base text-gray-900 font-semibold">₹2,582 night</p>
+        </div>
+
+        <div class="flex flex-col w-72 h-96">
+          <img
+            src="./photo/photo11.webp"
+            alt=""
+            class="rounded-md w-72 h-64 shadow-md"
+          />
+          <div class="flex justify-between mt-3">
+            <p class="text-base font-semibold">Kanathur Reddikuppam, India</p>
+            <div class="flex">
+              <i class="ri-star-s-fill"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="text-base text-gray-500">135 kilometres away</p>
+          <p class="text-base text-gray-500">11/16 Dec</p>
+          <p class="text-base text-gray-900 font-semibold">₹2,582 night</p>
+        </div>
+
+        <div class="flex flex-col w-72 h-96">
+          <img
+            src="./photo/photo12.webp"
+            alt=""
+            class="rounded-md w-72 h-64 shadow-md"
+          />
+          <div class="flex justify-between mt-3">
+            <p class="text-base font-semibold">Kanathur Reddikuppam, India</p>
+            <div class="flex">
+              <i class="ri-star-s-fill"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="text-base text-gray-500">135 kilometres away</p>
+          <p class="text-base text-gray-500">11/16 Dec</p>
+          <p class="text-base text-gray-900 font-semibold">₹2,582 night</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer  -->
+    <footer>
+      <div class="border border-t-2 border-gray-300 bg-gray-200">
+        <div
+          class="flex justify-between px-8 pt-14 pb-8 border border-b-2 border-gray-300"
+        >
+          <div class="flex flex-col">
+            <p class="text-base font-medium pb-4">Support</p>
+            <p
+              class="text-base text-gray-500 pb-2 hover:underline hover:decoration-gray-600"
+            >
+              Help Centre
+            </p>
+            <p
+              class="text-base text-gray-500 pb-2 hover:underline hover:decoration-gray-600"
+            >
+              AirCover
+            </p>
+            <p
+              class="text-base text-gray-500 pb-2 hover:underline hover:decoration-gray-600"
+            >
+              Anti-discrimination
+            </p>
+            <p
+              class="text-base text-gray-500 pb-2 hover:underline hover:decoration-gray-600"
+            >
+              Disability support
+            </p>
+            <p class="text-base text-gray-500 pb-2">Cancellation options</p>
+            <p class="text-base text-gray-500 pb-2">
+              Report neighbourhood concern
+            </p>
+          </div>
+
+          <div class="flex flex-col">
+            <p class="text-base font-medium pb-4">Hosting</p>
+            <p
+              class="text-base text-gray-500 pb-2 hover:underline hover:decoration-gray-600"
+            >
+              Airbnb your home
+            </p>
+            <p
+              class="text-base text-gray-500 pb-2 hover:underline hover:decoration-gray-600"
+            >
+              AirCover for Hosts
+            </p>
+            <p
+              class="text-base text-gray-500 pb-2 hover:underline hover:decoration-gray-600"
+            >
+              Hosting resources
+            </p>
+            <p
+              class="text-base text-gray-500 pb-2 hover:underline hover:decoration-gray-600"
+            >
+              Community forum
+            </p>
+            <p
+              class="text-base text-gray-500 pb-2 hover:underline hover:decoration-gray-600"
+            >
+              Hosting responsibly
+            </p>
+          </div>
+
+          <div class="flex flex-col pr-44">
+            <p class="text-base font-medium pb-4">Airbnb</p>
+            <p
+              class="text-base text-gray-500 pb-2 hover:underline hover:decoration-gray-600"
+            >
+              Newsroom
+            </p>
+            <p
+              class="text-base text-gray-500 pb-2 hover:underline hover:decoration-gray-600"
+            >
+              New features
+            </p>
+            <p
+              class="text-base text-gray-500 pb-2 hover:underline hover:decoration-gray-600"
+            >
+              Careers
+            </p>
+            <p
+              class="text-base text-gray-500 pb-2 hover:underline hover:decoration-gray-600"
+            >
+              Investors
+            </p>
+            <p
+              class="text-base text-gray-500 pb-2 hover:underline hover:decoration-gray-600"
+            >
+              Airbnb.org emergency stays
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="px-8 py-6">
+            <p>© 2023 Airbnb, Inc.·PrivacyTermsSitemapCompany details</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
